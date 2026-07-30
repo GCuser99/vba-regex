@@ -130,7 +130,7 @@ Public Function MatchNext( _
     MatchNext = r <> -1
 End Function
 
-Public Function Replace( _
+Public Function ReplaceByRegex( _
     ByRef regex As RegexTy, _
     ByRef replacer As String, _
     ByRef haystack As String, _
@@ -155,7 +155,7 @@ Public Function Replace( _
     
     StaticStringBuilder.AppendStr resultBuilder, Mid$(haystack, lastEndPos)
     
-    Replace = StaticStringBuilder.GetStr(resultBuilder)
+    ReplaceByRegex = StaticStringBuilder.GetStr(resultBuilder)
 End Function
 
 Public Function SplitByRegex( _
